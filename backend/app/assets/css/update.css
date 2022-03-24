@@ -1,0 +1,90 @@
+button.btn-delete {
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+.data-table__content table td a {
+    padding: 10px;
+}
+
+.data-table__content table th {
+    text-transform: uppercase;
+}
+
+.error {
+    color: red;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.btn-back {
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #3C6379;
+    border: 2px solid #3C6379;
+    transition: all .3s;
+    margin-left: 20px;
+}
+.btn-back:hover {
+    color: #3C6379;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+td.assign-box {
+    position: relative;
+}
+
+td.assign-box .assign-info {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: #fff;
+    padding: 10px;
+    color: inherit;
+    border: 1px solid #CADEED;
+    display: none;
+
+}
+td.assign-box .assign-info:before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    bottom: -20px;
+    left: 30px;
+    transform: translateX(-50%) rotate(180deg);
+    border-color: transparent transparent #E87844 transparent;
+}
+td.assign-box .assign-info .heading {
+    font-size: 18px;
+    text-align: center;
+}
+td.assign-box .assign-info .content {
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.content .content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5px;
+}
+.content .content-block .title {
+    margin: 0;
+    font-size: 14px;
+}
+.content .content-block span {
+    font-size: 12px;
+}
+
+.content .data-table {
+    padding-top: 50px;
+}

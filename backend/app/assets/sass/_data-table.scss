@@ -1,0 +1,153 @@
+.data-table {
+    padding: 0 30px 30px 30px;
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        border: 1px solid $border-color;
+        border-radius: 30px;
+        background: #f8faff;
+        
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        .title {
+            font-size: 28px;
+            a {
+                color: inherit;
+            }
+        }
+        .view-more {
+            font-size: 15px;
+            color: $text-color;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+            &:hover {
+                span {
+                    font-weight: 700;
+                }
+            }
+            span {
+                margin-right: 15px;
+            }
+        }
+    }
+    &__content {
+        
+        table {
+            border-collapse: collapse;
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+            font-size: 15px;
+            thead {
+                width: 100%;
+            }
+            tbody {
+                overflow-y: scroll;
+            }
+            th {
+                padding: 10px;
+                font-weight: 700;
+            }
+            td {
+                padding: 10px;
+                font-weight: 400;
+                a {
+                    color: $text-color;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            td.action {
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                
+                &:target {
+                    color: red;
+                }
+                
+                .action-list {
+                    position: absolute;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #fff;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -100%) ;
+                    border: 1px solid $border-color;
+                    transition: .3s;
+                    display: none;
+                    span {
+                        padding: 10px;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border: 10px solid;
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(180deg);
+                        border-color: transparent transparent #E87844 transparent;
+                    }
+                }
+                &.active {
+                    .action-list {
+                        display: flex;
+                    }
+                }
+            }
+            tr.no-bg {
+                background: #fff;
+            }
+        }
+    }
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border: 1px solid $border-color;
+        font-size: 14px;
+        transform: .3s;
+        cursor: pointer;
+        &.active, &:hover {
+            background: $text-color;
+            font-weight: 500;
+            color: #fff;
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .data-table {
+        padding: 20px;
+        &-wrapper {
+            padding: 10px;
+            overflow-y: scroll;
+        }
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .data-table {
+        padding: 20px;
+        &-wrapper {
+            padding: 10px;
+            overflow-y: scroll;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: $font;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    color: $text-color;
+}
+
+.main-content {
+    width: calc(100% - 250px);
+    float: right;
+    height: 70px;
+    transition: .3s ease-in-out;
+}
+
+.pd-30 {
+    padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .pd-30 {
+        padding: 20px;
+    }
+}
